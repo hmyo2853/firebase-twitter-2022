@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AppRouter from "../components/Router";
+import AppRouter from "./AppRouter";
 import { authService } from "../fbase";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
       setInit(true);
     });
   }, []);
+
   return (
     <div>
       {init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing...."}
